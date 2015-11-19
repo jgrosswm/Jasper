@@ -1,0 +1,25 @@
+# -*- coding: utf-8-*-
+import re
+import wikipedia
+
+# Written by Naoto Ida 
+
+WORDS = ["HI", "HELLO"]
+
+PRIORITY = 1
+
+def handle(text, mic, profile):
+
+        mic.say("Hello! How are you?")
+
+        def sayDefinition(text):
+            mic.say("Glad to hear it.")
+
+        sayDefinition(mic.activeListen())
+
+
+def isValid(text):
+        return bool(re.search(r'\bhi|hello\b', text, re.IGNORECASE)) 
+    
+
+
